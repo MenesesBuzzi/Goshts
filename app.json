@@ -1,0 +1,66 @@
+{
+  "expo": {
+    "name": "Fantasma",
+    "slug": "fantasma",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#0b0b14",
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "app.fantasma.ghost",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "O Fantasma usa sua localização enquanto o app está aberto para montar a rota das entregas e mostrar sua posição para a loja."
+      }
+    },
+    "android": {
+      "package": "app.fantasma.ghost",
+      "adaptiveIcon": {
+        "backgroundColor": "#6f5fe8",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "permissions": [
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.RECORD_AUDIO"
+      ],
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "O Fantasma usa sua localização enquanto o app está aberto para montar a rota das entregas e mostrar sua posição para a loja."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "O Fantasma usa suas fotos só para você escolher a foto do perfil."
+        }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#0b0b14"
+        }
+      ],
+      "expo-status-bar"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "ef185e0f-5778-4347-b76e-6e71f486945b"
+      }
+    },
+    "owner": "ordenmachine"
+  }
+}
